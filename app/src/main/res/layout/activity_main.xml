@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TabHost xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@android:id/tabhost">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+<!--     골드 바 생성   -->
+        <LinearLayout
+            android:id="@+id/goldPossession"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_margin="5dp"
+                android:src="@drawable/goldimage" />
+
+            <TextView
+                android:id="@+id/userGold"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="3dp"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/userName"
+                android:layout_width="140dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="20dp"
+                android:gravity="center"
+                android:maxLines="1"
+                android:ellipsize="end"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:padding="2dp"
+                android:id="@+id/save"
+                android:text="@string/save"/>
+
+        </LinearLayout>
+<!--    메인 터치 바   -->
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:id="@android:id/tabcontent"
+            android:layout_weight="1">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:id="@+id/mainSection"
+                android:background="@drawable/mainimage">
+<!--            유저 경험치바    -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <ProgressBar
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        style="?android:attr/progressBarStyleHorizontal"
+                        android:max="1000"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:id="@+id/progressBar"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:id="@+id/experienceBar"/>
+                </LinearLayout>
+<!--            메인 화면 구성-->
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageButton
+                        android:id="@+id/mainPage"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@android:color/transparent"/>
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/charactorImage"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true"
+                        android:src="@drawable/ic_launcher_foreground"/>
+                </RelativeLayout>
+            </LinearLayout>
+
+
+
+<!--            가챠 화면 구성-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:id="@+id/rouletteList"
+                android:background="#00ff00">
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/goldRandom"
+                    android:text="@string/goldRandom"/>
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/roulette"
+                    android:text="@string/samePicture"/>
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/RacingCar"
+                    android:text="@string/racingGame"/>
+            </LinearLayout>
+
+
+
+<!--            정보 화면 구성-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:id="@+id/information"
+                android:background="#0000ff">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:textSize="20sp"
+                    android:id="@+id/InfoLogin"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:textSize="20sp"
+                    android:id="@+id/InfoGold"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:textSize="20sp"
+                    android:id="@+id/InfoBank"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:textSize="20sp"
+                    android:id="@+id/InfoDate"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:text="@string/membership"
+                        android:id="@+id/NewLogin"/>
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:text="@string/saveDB"
+                        android:id="@+id/saveDB"/>
+                </LinearLayout>
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:id="@+id/sql"
+                    android:text="@string/Error"/>
+
+            </LinearLayout>
+<!--        강화 창    -->
+
+            <SlidingDrawer
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:content="@+id/content"
+                android:handle="@+id/handle">
+
+                <Button
+                    android:id="@+id/handle"
+                    android:layout_width="match_parent"
+                    android:layout_height="15dp" />
+
+                <RelativeLayout
+                    android:id="@+id/content"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#fffaaa">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/goldUP"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_margin="30dp"
+                        android:textSize="15sp"
+                        android:id="@+id/goldText"/>
+                    <TextView
+                        android:layout_width="120dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBaseline="@+id/goldText"
+                        android:layout_toRightOf="@+id/goldText"
+                        android:textSize="15sp"
+                        android:lines="2"
+                        android:id="@+id/goldUPScale"/>
+                    <Button
+                        android:layout_width="120dp"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/goldupButton"
+                        android:layout_margin="30dp"
+                        android:gravity="center"
+                        android:layout_alignBaseline="@+id/goldUPScale"
+                        android:layout_toRightOf="@+id/goldUPScale"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/EXPUP"
+                        android:layout_below="@+id/goldText"
+                        android:layout_margin="30dp"
+                        android:textSize="15dp"
+                        android:id="@+id/expText"/>
+                    <TextView
+                        android:layout_width="120dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBaseline="@+id/expText"
+                        android:layout_toRightOf="@+id/expText"
+                        android:lines="2"
+                        android:textSize="15dp"
+                        android:id="@+id/expUPScale"/>
+                    <Button
+                        android:layout_width="120dp"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/expupButton"
+                        android:layout_margin="30dp"
+                        android:layout_alignBaseline="@+id/expUPScale"
+                        android:layout_toRightOf="@+id/expUPScale"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="1dp"
+                        android:text="@string/hr"
+                        android:id="@+id/hr"
+                        android:layout_below="@+id/expUPScale"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/hr"
+                        android:textSize="15sp"
+                        android:layout_margin="30dp"
+                        android:layout_alignLeft="@+id/hr"
+                        android:id="@+id/Bank"
+                        android:text="@string/Bank"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="15sp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_toRightOf="@+id/Bank"
+                        android:layout_alignBaseline="@+id/Bank"
+                        android:id="@+id/BankValue"/>
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/BankValue"
+                        android:layout_alignRight="@+id/BankValue"
+                        android:layout_marginRight="20dp"
+                        android:text="@string/withdraw"
+                        android:id="@+id/withdraw"/>
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toLeftOf="@+id/withdraw"
+                        android:layout_alignBaseline="@+id/withdraw"
+                        android:text="@string/deposit"
+                        android:id="@+id/deposit"/>
+                </RelativeLayout>
+            </SlidingDrawer>
+        </FrameLayout>
+        <TabWidget
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@android:id/tabs">
+        </TabWidget>
+    </LinearLayout>
+</TabHost>

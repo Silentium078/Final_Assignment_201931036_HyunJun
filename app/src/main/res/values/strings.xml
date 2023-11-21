@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">Final_Assignment_201931036_HyunJun</string>
+    <string name="id">아이디</string>
+    <string name="pw">비밀번호</string>
+    <string name="idLength">6자 이상</string>
+    <string name="pwLength">8자 이상</string>
+    <string name="guest">Guest</string>
+    <string name="submit">로그인</string>
+    <string name="save">저장</string>
+    <string name="membership">회원가입</string>
+    <string name="saveDB">저장 후 새로고침</string>
+    <string name="goldRandom">골드 랜덤 뽑기</string>
+    <string name="samePicture">같은 그림 맞추기</string>
+    <string name="racingGame">레이싱 1등 맞추기</string>
+    <string name="Error">오류 발생시 누르시오</string>
+    <string name="Bank">은행 잔고  : </string>
+    <string name="nowGold">현재 잔고 :</string>
+    <string name="deposit">입금</string>
+    <string name="depositInput">입금할 잔액을 입력해주세요.</string>
+    <string name="withdraw">출금</string>
+    <string name="withdrawInput">출금할 잔액을 입력해주세요.</string>
+    <string name="goldUP">골드 증가</string>
+    <string name="EXPUP">EXP 증가</string>
+    <string name="hr">_________________________________________________________________</string>
+</resources>
